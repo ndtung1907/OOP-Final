@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.MainScreenController"
+      alignment="CENTER" spacing="10" prefWidth="600" prefHeight="400">
+    <children>
+        <!-- Tiêu đề -->
+        <Label text="Đăng Nhập Hệ Thống Quản Lý Nhân Sự" style="-fx-font-size: 18px;" />
+
+        <!-- ComboBox lựa chọn chức vụ -->
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Chọn chức vụ:" />
+            <ComboBox fx:id="positionComboBox" promptText="Chọn chức vụ" />
+        </HBox>
+
+        <!-- TextField nhập tài khoản -->
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Tài khoản:" />
+            <TextField fx:id="usernameField" promptText="Tài khoản" />
+        </HBox>
+
+        <!-- PasswordField nhập mật khẩu -->
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Mật khẩu:" />
+            <PasswordField fx:id="passwordField" promptText="Mật khẩu" />
+        </HBox>
+
+        <!-- HBox chứa nút đăng nhập và đổi mật khẩu -->
+        <HBox spacing="10" alignment="CENTER">
+            <!-- Nút đăng nhập -->
+            <Button fx:id="loginButton" text="Đăng nhập" onAction="#handleLogin" />
+            <!-- Nút đổi mật khẩu -->
+            <Button fx:id="changePasswordButton" text="Đổi mật khẩu" onAction="#handleChangePassword" />
+        </HBox>
+
+        <!-- Nút Quên mật khẩu -->
+        <Hyperlink fx:id="forgotPasswordLink" text="Quên mật khẩu?" onAction="#handleForgotPassword" />
+
+        <!-- Label thông báo lỗi hoặc thành công -->
+        <Label fx:id="loginMessage" textFill="red" style="-fx-font-size: 12px;" />
+    </children>
+</VBox>

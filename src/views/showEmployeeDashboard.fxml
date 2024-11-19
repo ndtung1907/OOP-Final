@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.EmployeeDashboardController"
+            prefWidth="900"  
+            prefHeight="600">
+    <children>
+        <!-- Nút đăng xuất ở góc trái khung hình -->
+        <Button fx:id="logoutButton" text="Đăng Xuất" onAction="#logout" 
+                AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" 
+                prefWidth="120" prefHeight="40" />  <!-- Kích thước nút đăng xuất -->
+
+        <!-- Container chứa ảnh đại diện và thông tin nhân viên, căn giữa nội dung -->
+        <HBox spacing="30" alignment="CENTER" AnchorPane.topAnchor="80" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+            <!-- Phần Ảnh Đại Diện -->
+            <VBox spacing="20" alignment="CENTER" layoutX="0" layoutY="50">
+                <ImageView fx:id="profileImageView" fitWidth="200" fitHeight="200" /> <!-- Kích thước ảnh đại diện -->
+                <Label text="Ảnh đại diện" />
+            </VBox>
+            
+            <!-- Phần Thông Tin Nhân Viên -->
+            <VBox spacing="15" alignment="CENTER_LEFT">
+                <!-- Dòng thông tin Mã Nhân Viên -->
+                <HBox spacing="15">
+                    <Label text="Mã Nhân Viên:" style="-fx-font-size: 14px;" />
+                    <Label fx:id="maNhanVienLabel" style="-fx-font-size: 14px;" />
+                </HBox>
+                <!-- Dòng thông tin Họ Tên -->
+                <HBox spacing="15">
+                    <Label text="Họ Tên:" style="-fx-font-size: 14px;" />
+                    <Label fx:id="hoTenLabel" style="-fx-font-size: 14px;" />
+                </HBox>
+                <!-- Dòng thông tin Ngày Sinh -->
+                <HBox spacing="15">
+                    <Label text="Ngày Sinh:" style="-fx-font-size: 14px;" />
+                    <Label fx:id="ngaySinhLabel" style="-fx-font-size: 14px;" />
+                </HBox>
+                <!-- Dòng thông tin Số CMND -->
+                <HBox spacing="15">
+                    <Label text="Số CMND:" style="-fx-font-size: 14px;" />
+                    <Label fx:id="soCMNDLabel" style="-fx-font-size: 14px;" />
+                </HBox>
+                <!-- Dòng thông tin Quê Quán -->
+                <HBox spacing="15">
+                    <Label text="Quê Quán:" style="-fx-font-size: 14px;" />
+                    <Label fx:id="queQuanLabel" style="-fx-font-size: 14px;" />
+                </HBox>
+                <!-- Dòng thông tin Số Điện Thoại -->
+                <HBox spacing="15">
+                    <Label text="Số Điện Thoại:" style="-fx-font-size: 14px;" />
+                    <Label fx:id="soDienThoaiLabel" style="-fx-font-size: 14px;" />
+                </HBox>
+                <!-- Dòng thông tin Giới Tính -->
+                <HBox spacing="15">
+                    <Label text="Giới Tính:" style="-fx-font-size: 14px;" />
+                    <Label fx:id="gioiTinhLabel" style="-fx-font-size: 14px;" />
+                </HBox>
+                <!-- Dòng thông tin Địa Chỉ -->
+                <HBox spacing="15">
+                    <Label text="Địa Chỉ:" style="-fx-font-size: 14px;" />
+                    <Label fx:id="diaChiLabel" style="-fx-font-size: 14px;" />
+                </HBox>
+                <!-- Dòng thông tin Mã Phòng Ban -->
+                <HBox spacing="15">
+                    <Label text="Mã Phòng Ban:" style="-fx-font-size: 14px;" />
+                    <Label fx:id="maPhongBanLabel" style="-fx-font-size: 14px;" />
+                </HBox>
+
+                <!-- Nút Xem Lương -->
+                <Button fx:id="viewSalaryButton" text="Xem Lương" onAction="#viewSalary" 
+                        prefWidth="120" prefHeight="40" style="-fx-font-size: 14px; -fx-background-color: lightgreen;"/>
+            </VBox>
+        </HBox>
+    </children>
+</AnchorPane>
